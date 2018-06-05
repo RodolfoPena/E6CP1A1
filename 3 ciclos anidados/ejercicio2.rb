@@ -24,3 +24,19 @@ Generar el código para imprimir la siguiente tabla:
   <tbody>
  </table>
 =end
+def create_table(tr,td)
+  puts '<table>'
+  puts '<body>'
+  tr.times do |i|
+    puts '<tr>'
+      td.times do |k|
+        k = k + i*td + 1
+        puts '<td>' + "#{k}" + '</td>'
+      end
+    puts '</tr>'
+  end
+  puts '</table>'
+  puts '</body>'
+end
+
+create_table(3,4)
